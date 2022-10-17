@@ -206,6 +206,8 @@ function startGame() {
   let customTextArray = formatParagraph(customText.value, 60);
 
   modetype == "a" ? null : (quotes_array = customTextArray);
+  modetype == "b" ? (customText.style.display = "none") : null;
+
   resetValues();
   updateQuote();
 
@@ -264,3 +266,5 @@ function resetMode(value) {
     ? (customText.style.display = "none")
     : (customText.style.display = "flex");
 }
+
+/* esta funcionando la sincorinización */
