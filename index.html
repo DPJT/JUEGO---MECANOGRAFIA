@@ -1,0 +1,86 @@
+<html lang="en">
+  <head>
+    <title>Velocidad de programar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-secondary w-100 flex-v gap-15 justify-evenly align-center">
+      <h1 class="ft-size-30 ft-wei-8 color-H1">
+        TESTEA TU VELOCIDAD DE ESCRITURA
+      </h1>
+      <!-- TARJETAS -->
+      <div class="flex-h gap-20">
+        <div
+          class="wpm flex-v bg-primary color-h1 ft-size-25 ft-wei-8 center h-150px w-150px rd-5 flex-h"
+        >
+          <h3 class="ft-size-20 ft-wei-8 color-h1">WPM</h3>
+          <h3 class="curr_wpm ft-size-35 ft-wei-8 color-h1">100</h3>
+        </div>
+        <div
+          class="cpm flex-v bg-primary color-h1 ft-size-25 ft-wei-8 center h-150px w-150px rd-5 flex-h"
+        >
+          <h3 class="ft-size-20 ft-wei-8 color-h1">CPM</h3>
+          <h3 class="curr_cpm ft-size-35 ft-wei-8 color-h1">100</h3>
+        </div>
+        <div
+          class="errors flex-v bg-primary color-h1 ft-size-25 ft-wei-8 center h-150px w-150px rd-5 flex-h"
+        >
+          <h3 class="ft-size-20 ft-wei-8 color-h1">Errores</h3>
+          <h3 class="curr_errors ft-size-35 ft-wei-8 color-h1">0</h3>
+        </div>
+        <div
+          class="timer flex-v bg-primary color-h1 ft-size-25 ft-wei-8 center h-150px w-150px rd-5 flex-h"
+        >
+          <h3 class="ft-size-20 ft-wei-8 color-h1">Tiempo</h3>
+          <h3 class="curr_time ft-size-35 ft-wei-8 color-h1">60s</h3>
+        </div>
+        <div
+          class="accuracy flex-v bg-primary color-h1 ft-size-25 ft-wei-8 center h-150px w-150px rd-5 flex-h"
+        >
+          <h3 class="ft-size-20 ft-wei-8 color-h1">% Aciertos</h3>
+          <h3 class="curr_accuracy ft-size-35 ft-wei-8 color-h1">100</h3>
+        </div>
+      </div>
+
+      <!-- Seción seleccion de modos -->
+
+      <div class="flex-h gap-15">
+        <button class="modoa btn btn_b min-w-max" onclick="resetMode('a')">
+          MODO A
+        </button>
+        <button class="modob btn btn_b min-w-max" onclick="resetMode('b')">
+          MODO B
+        </button>
+      </div>
+
+      <!-- Sección Nueva de input parar introducir un texto personalizado -->
+      <textarea
+        class="input_customtext display-none"
+        placeholder="introduce el texto que quieres poner a prueba..."
+      ></textarea>
+      <!-- FIN TARJETAS -->
+      <p class="quote ft-size-50 ft-wei-8 color-H3">
+        Toca el cuadro de abajo para comenzar
+      </p>
+      <textarea
+        class="input_area"
+        placeholder="empieza a escribir aqui..."
+        oninput="processCurrentText()"
+        onfocus="startGame()"
+      ></textarea>
+
+      <div class="registro w-90 min-h-min flex-v gap-15 center">
+        <div class="w-100 flex-h gap-15">
+          <h3>wpm</h3>
+          <h3>cpm</h3>
+          <h3>errores</h3>
+          <h3>% Aciertos</h3>
+        </div>
+      </div>
+      <button class="restart_btn btn btn_b ft-size-21" onclick="resetValues()">
+        Reiniciar
+      </button>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
